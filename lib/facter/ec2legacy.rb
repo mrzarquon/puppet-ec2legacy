@@ -19,11 +19,11 @@ def flatten_structure(path, structure)
   results
 end
 
-factermajversion = :facterversion.split('.')[0]
+factermajversion = Facter.value(:facterversion).split('.')[0].to_i
 
 if factermajversion >= 3 && (ec2_metadata = Facter.value(:ec2_metadata))
   ec2_facts = flatten_structure("ec2", ec2_metadata)
-	ec2_facts.each_pair do |factname, factvalue|
-		Facter.add(factname, :value => factvalue)
-	end
+  ec2_facts.each_pair do |factname, factvalue|
+    Facter.add(factname, :value => factvalue)
+  end
 end
