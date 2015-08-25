@@ -1,0 +1,21 @@
+{
+  "name": "mrzarquon-ec2legacy",
+  "version": "0.1.0",
+  "author": "Chris Barker",
+  "license": "Apache-2.0",
+  "summary": "Adds flattened EC2 facts removed in Facter 3.x",
+  "source": "https://github.com/mrzarquon/puppet-ec2legacy",
+  "project_page": "https://forge.puppetlabs.com/mrzarquon/ec2legacy",
+  "issues_url": "https://github.com/mrzarquon/puppet-ec2legacy/issues",
+  "tags": ["aws", "ec2", "facts", "amazon"],
+  "requirements": [
+  {
+    "name": "pe",
+    "version_requirement": ">= 2015.2.0"
+  },
+  {
+    "name": "puppet",
+    "version_requirement": ">= 4.0.0"
+  }
+  ]
+}
